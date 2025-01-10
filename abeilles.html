@@ -3,72 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abeilles de Bee Swarm Simulator</title>
+    <title>Liste des Abeilles - Bee Swarm Simulator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f3f3f3;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
 
         h1 {
             text-align: center;
-            color: #2a9d8f;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
+            color: #4CAF50;
             margin: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
-
-        table th, table td {
-            text-align: left;
-            padding: 12px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        table th {
-            background-color: #2a9d8f;
-            color: white;
-            text-transform: uppercase;
-        }
-
-        table tr:hover {
-            background-color: #f1f1f1;
-        }
-
-        table tr:nth-child(even) {
-            background-color: #f9f9f9;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
         }
 
         .rarity {
             font-weight: bold;
-            padding: 5px;
+            text-transform: capitalize;
+            padding: 4px 8px;
             border-radius: 5px;
         }
 
-        .common { color: #4CAF50; }
-        .rare { color: #2196F3; }
-        .epic { color: #9C27B0; }
-        .legendary { color: #FFC107; }
-        .mythic { color: #FF5722; }
-        .event { color: #FF0000; }
+        .common { background-color: #a8e6cf; color: #000; }
+        .rare { background-color: #2196F3; color: #fff; }
+        .epic { background-color: #9C27B0; color: #fff; }
+        .legendary { background-color: #FFC107; color: #000; }
+        .mythic { background-color: #FF5722; color: #fff; }
+        .event { background-color: #FF0000; color: #fff; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Abeilles de Bee Swarm Simulator</h1>
+        <h1>Liste des Abeilles - Bee Swarm Simulator</h1>
         <table>
             <thead>
                 <tr>
@@ -80,80 +80,110 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Abeilles communes -->
                 <tr>
                     <td>Basic Bee</td>
                     <td><span class="rarity common">Commune</span></td>
                     <td>Neutre</td>
                     <td>Pas de capacités spéciales.</td>
-                    <td>Gratuite dès le début.</td>
+                    <td>Début du jeu ou œufs de base.</td>
                 </tr>
+
+                <!-- Abeilles rares -->
                 <tr>
                     <td>Brave Bee</td>
                     <td><span class="rarity rare">Rare</span></td>
                     <td>Neutre</td>
-                    <td>+1 d'attaque, capacité Brave (+2 d'attaque temporaire).</td>
-                    <td>Œufs de base ou rare.</td>
+                    <td>+1 attaque, capacité Brave (bonus d'attaque temporaire).</td>
+                    <td>Œufs rares ou de base.</td>
                 </tr>
                 <tr>
                     <td>Hasty Bee</td>
                     <td><span class="rarity rare">Rare</span></td>
                     <td>Neutre</td>
-                    <td>Capacité Hasty (+20% de vitesse temporaire).</td>
-                    <td>Œufs de base ou rare.</td>
-                </tr>
-                <tr>
-                    <td>Bumble Bee</td>
-                    <td><span class="rarity rare">Rare</span></td>
-                    <td>Bleue</td>
-                    <td>Capacité Blue Boost (bonus de pollen bleu).</td>
-                    <td>Œufs de base ou rare.</td>
-                </tr>
-                <tr>
-                    <td>Cool Bee</td>
-                    <td><span class="rarity rare">Rare</span></td>
-                    <td>Bleue</td>
-                    <td>Capacité Blue Boost (bonus de pollen bleu).</td>
-                    <td>Œufs de base ou rare.</td>
-                </tr>
-                <tr>
-                    <td>Rascal Bee</td>
-                    <td><span class="rarity rare">Rare</span></td>
-                    <td>Rouge</td>
-                    <td>Capacité Red Boost (bonus de pollen rouge).</td>
-                    <td>Œufs de base ou rare.</td>
+                    <td>Capacité Hasty (bonus de vitesse temporaire).</td>
+                    <td>Œufs rares ou de base.</td>
                 </tr>
                 <tr>
                     <td>Rad Bee</td>
                     <td><span class="rarity rare">Rare</span></td>
                     <td>Rouge</td>
-                    <td>Capacité Red Boost (bonus de pollen rouge).</td>
-                    <td>Œufs de base ou rare.</td>
+                    <td>Capacité Red Boost.</td>
+                    <td>Œufs rares ou de base.</td>
                 </tr>
+                <tr>
+                    <td>Cool Bee</td>
+                    <td><span class="rarity rare">Rare</span></td>
+                    <td>Bleue</td>
+                    <td>Capacité Blue Boost.</td>
+                    <td>Œufs rares ou de base.</td>
+                </tr>
+
+                <!-- Abeilles épiques -->
                 <tr>
                     <td>Bubble Bee</td>
                     <td><span class="rarity epic">Épique</span></td>
                     <td>Bleue</td>
                     <td>Capacité Bubble (bonus de pollen bleu).</td>
-                    <td>Œufs rares ou épiques.</td>
+                    <td>Œufs épiques ou œufs bleus.</td>
                 </tr>
+                <tr>
+                    <td>Rage Bee</td>
+                    <td><span class="rarity epic">Épique</span></td>
+                    <td>Rouge</td>
+                    <td>Capacité Rage (bonus d'attaque temporaire).</td>
+                    <td>Œufs épiques ou rouges.</td>
+                </tr>
+
+                <!-- Abeilles légendaires -->
                 <tr>
                     <td>Riley Bee</td>
                     <td><span class="rarity legendary">Légendaire</span></td>
                     <td>Rouge</td>
                     <td>Capacité Red Boost et Focus.</td>
-                    <td>Œufs légendaires ou donnés par le club Rouge HQ.</td>
+                    <td>Œufs légendaires ou HQ Rouge.</td>
                 </tr>
+                <tr>
+                    <td>Shy Bee</td>
+                    <td><span class="rarity legendary">Légendaire</span></td>
+                    <td>Rouge</td>
+                    <td>Capacité Shyness (bonus de pollen rouge).</td>
+                    <td>Œufs légendaires.</td>
+                </tr>
+
+                <!-- Abeilles mythiques -->
+                <tr>
+                    <td>Vector Bee</td>
+                    <td><span class="rarity mythic">Mythique</span></td>
+                    <td>Neutre</td>
+                    <td>Capacité Tracé Vectoriel (bonus cumulatif de collecte).</td>
+                    <td>Œufs mythiques ou crafting.</td>
+                </tr>
+                <tr>
+                    <td>Tadpole Bee</td>
+                    <td><span class="rarity mythic">Mythique</span></td>
+                    <td>Bleue</td>
+                    <td>Capacité Bulles (pollen bleu boosté).</td>
+                    <td>Œufs mythiques ou crafting.</td>
+                </tr>
+
+                <!-- Abeilles événementielles -->
                 <tr>
                     <td>Tabby Bee</td>
                     <td><span class="rarity event">Événement</span></td>
                     <td>Neutre</td>
-                    <td>Capacité Tabby Love (bonus cumulatif de collecte).</td>
+                    <td>Capacité Tabby Love (bonus cumulatif).</td>
                     <td>Achetée avec des tickets.</td>
                 </tr>
-                <!-- Ajoute d'autres abeilles ici -->
+                <tr>
+                    <td>Photon Bee</td>
+                    <td><span class="rarity event">Événement</span></td>
+                    <td>Neutre</td>
+                    <td>Capacité Photon Burst (bonus massif de collecte).</td>
+                    <td>Achetée avec des tickets.</td>
+                </tr>
             </tbody>
         </table>
     </div>
 </body>
 </html>
-x
