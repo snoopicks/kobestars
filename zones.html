@@ -5,40 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zones de Bee Swarm Simulator</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
+
         h1 {
             text-align: center;
-            color: #333;
+            color: #2a9d8f;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .zone {
             margin-bottom: 30px;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 2px solid #ddd;
             padding-bottom: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
         }
+
+        .zone:hover {
+            background-color: #f9f9f9;
+            transform: translateY(-5px);
+        }
+
         .zone:last-child {
             border-bottom: none;
         }
+
         .zone h2 {
-            color: #555;
+            color: #264653;
+            margin: 0 0 10px;
         }
+
         .zone ul {
             padding-left: 20px;
+            list-style-type: disc;
         }
+
         .zone ul li {
             margin-bottom: 5px;
+        }
+
+        /* Button to scroll to top */
+        #scrollToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #2a9d8f;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #scrollToTop:hover {
+            background: #21867a;
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -65,76 +106,39 @@
                 <li><strong>Particularités :</strong> Donne des graines de tournesol (Sunflower Seeds).</li>
             </ul>
         </div>
-        
-        <div class="zone">
-            <h2>🌹 Champ des Champignons (Mushroom Field)</h2>
-            <ul>
-                <li><strong>Accès :</strong> Nécessite 5 abeilles pour débloquer.</li>
-                <li><strong>Fleurs :</strong> Champignons rouges (Pollen rouge).</li>
-                <li><strong>Ennemis :</strong> Coccinelles et scarabées.</li>
-                <li><strong>Particularités :</strong> Bonne zone pour collecter du pollen rouge.</li>
-            </ul>
-        </div>
-        
-        <div class="zone">
-            <h2>🐞 Champ des Fraises (Strawberry Field)</h2>
-            <ul>
-                <li><strong>Accès :</strong> Nécessite 5 abeilles.</li>
-                <li><strong>Fleurs :</strong> Fraises (Pollen rouge).</li>
-                <li><strong>Ennemis :</strong> Coccinelles et scarabées.</li>
-                <li><strong>Butins :</strong> Fraises (Strawberries).</li>
-            </ul>
-        </div>
-        
-        <div class="zone">
-            <h2>🌲 Forêt de Bambous (Bamboo Field)</h2>
-            <ul>
-                <li><strong>Accès :</strong> Nécessite 5 abeilles.</li>
-                <li><strong>Fleurs :</strong> Bambous (Pollen bleu).</li>
-                <li><strong>Ennemis :</strong> Scarabées rhino (Rhino Beetle).</li>
-                <li><strong>Particularités :</strong> Idéal pour les quêtes de pollen bleu.</li>
-            </ul>
-        </div>
-        
-        <div class="zone">
-            <h2>🌹 Champ des Roses (Rose Field)</h2>
-            <ul>
-                <li><strong>Accès :</strong> Nécessite 15 abeilles.</li>
-                <li><strong>Fleurs :</strong> Roses (Pollen rouge).</li>
-                <li><strong>Ennemis :</strong> Scarabées rhino et araignée.</li>
-                <li><strong>Butins :</strong> Gelée royale (Royal Jelly).</li>
-            </ul>
-        </div>
-        
-        <div class="zone">
-            <h2>🧊 Champ Ananas (Pineapple Patch)</h2>
-            <ul>
-                <li><strong>Accès :</strong> Nécessite 10 abeilles.</li>
-                <li><strong>Fleurs :</strong> Ananas (Pollen blanc).</li>
-                <li><strong>Ennemis :</strong> Mante religieuse (Mantis).</li>
-                <li><strong>Butins :</strong> Ananas (Pineapples).</li>
-            </ul>
-        </div>
-        
-        <div class="zone">
-            <h2>🌿 Montagne Bleue (Blue Flower Field)</h2>
-            <ul>
-                <li><strong>Accès :</strong> Nécessite 5 abeilles.</li>
-                <li><strong>Fleurs :</strong> Fleurs bleues (Pollen bleu).</li>
-                <li><strong>Ennemis :</strong> Scarabées rhino.</li>
-                <li><strong>Particularités :</strong> Zone calme pour cultiver du pollen bleu.</li>
-            </ul>
-        </div>
-        
-        <div class="zone">
-            <h2>🌈 Champ Arc-en-ciel (Mountain Top Field)</h2>
-            <ul>
-                <li><strong>Accès :</strong> Nécessite 25 abeilles.</li>
-                <li><strong>Fleurs :</strong> Mélange de toutes les couleurs.</li>
-                <li><strong>Ennemis :</strong> Aucun.</li>
-                <li><strong>Particularités :</strong> Le meilleur endroit pour collecter rapidement du pollen.</li>
-            </ul>
-        </div>
+
+        <!-- Ajoutez d'autres zones ici en suivant la même structure -->
     </div>
+
+    <!-- Bouton pour remonter en haut de la page -->
+    <button id="scrollToTop">↑</button>
+
+    <script>
+        // Ajouter un effet de survol
+        document.querySelectorAll('.zone').forEach(zone => {
+            zone.addEventListener('click', () => {
+                zone.classList.toggle('active');
+                alert("Vous avez cliqué sur " + zone.querySelector('h2').textContent);
+            });
+        });
+
+        // Bouton pour revenir en haut de la page
+        const scrollToTop = document.getElementById('scrollToTop');
+        scrollToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Afficher ou cacher le bouton de défilement
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTop.style.display = 'block';
+            } else {
+                scrollToTop.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
