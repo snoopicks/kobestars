@@ -3,57 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abeilles - Bee Swarm Simulator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Abeilles de Bee Swarm Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2a9d8f;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        table th, table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #2a9d8f;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .rarity {
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .common { color: #4CAF50; }
+        .rare { color: #2196F3; }
+        .epic { color: #9C27B0; }
+        .legendary { color: #FFC107; }
+        .mythic { color: #FF5722; }
+        .event { color: #FF0000; }
+    </style>
 </head>
-<body class="abeilles">
-    <header>
-        <div class="logo">
-            <h1>Bee Swarm Simulator</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="strategies.html">Stratégies</a></li>
-                <li><a href="abeilles.html" class="active">Abeilles</a></li>
-                <li><a href="zones.html">Zones</a></li>
-                <li><a href="boosts.html">Boosts</a></li>
-                <li><a href="calculatrice.html">Calculatrice</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="intro">
-            <h2>Les Abeilles de Bee Swarm Simulator</h2>
-            <p>Découvrez toutes les abeilles, leurs capacités uniques et comment les obtenir pour optimiser vos récoltes.</p>
-        </section>
-        <section class="bee-list">
-            <div class="bee-card">
-                <img src="images/common-bee.svg" alt="Abeille Commune">
-                <h3>Abeille Commune</h3>
-                <p><strong>Type :</strong> Commune</p>
-                <p><strong>Capacité :</strong> Aucune</p>
-                <p><strong>Obtention :</strong> Débloquée au départ</p>
-            </div>
-            <div class="bee-card">
-                <img src="images/legendary-bee.svg" alt="Abeille Légendaire">
-                <h3>Abeille Légendaire</h3>
-                <p><strong>Type :</strong> Légendaire</p>
-                <p><strong>Capacité :</strong> Augmente la production de miel de manière significative</p>
-                <p><strong>Obtention :</strong> Quête spéciale</p>
-            </div>
-            <div class="bee-card">
-                <img src="images/rare-bee.svg" alt="Abeille Rageuse">
-                <h3>Abeille Rageuse</h3>
-                <p><strong>Type :</strong> Rare</p>
-                <p><strong>Capacité :</strong> Augmente la vitesse de récolte temporairement</p>
-                <p><strong>Obtention :</strong> Après un certain nombre de récoltes</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Bee Swarm Simulator Guide. Tous droits réservés.</p>
-    </footer>
-    <script src="scripts.js"></script>
+<body>
+    <div class="container">
+        <h1>Abeilles de Bee Swarm Simulator</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Rareté</th>
+                    <th>Couleur</th>
+                    <th>Capacités</th>
+                    <th>Comment l'obtenir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basic Bee</td>
+                    <td><span class="rarity common">Commune</span></td>
+                    <td>Neutre</td>
+                    <td>Pas de capacités spéciales.</td>
+                    <td>Gratuite dès le début.</td>
+                </tr>
+                <tr>
+                    <td>Brave Bee</td>
+                    <td><span class="rarity rare">Rare</span></td>
+                    <td>Neutre</td>
+                    <td>+1 d'attaque, capacité Brave (+2 d'attaque temporaire).</td>
+                    <td>Œufs de base ou rare.</td>
+                </tr>
+                <tr>
+                    <td>Hasty Bee</td>
+                    <td><span class="rarity rare">Rare</span></td>
+                    <td>Neutre</td>
+                    <td>Capacité Hasty (+20% de vitesse temporaire).</td>
+                    <td>Œufs de base ou rare.</td>
+                </tr>
+                <tr>
+                    <td>Bumble Bee</td>
+                    <td><span class="rarity rare">Rare</span></td>
+                    <td>Bleue</td>
+                    <td>Capacité Blue Boost (bonus de pollen bleu).</td>
+                    <td>Œufs de base ou rare.</td>
+                </tr>
+                <tr>
+                    <td>Cool Bee</td>
+                    <td><span class="rarity rare">Rare</span></td>
+                    <td>Bleue</td>
+                    <td>Capacité Blue Boost (bonus de pollen bleu).</td>
+                    <td>Œufs de base ou rare.</td>
+                </tr>
+                <tr>
+                    <td>Rascal Bee</td>
+                    <td><span class="rarity rare">Rare</span></td>
+                    <td>Rouge</td>
+                    <td>Capacité Red Boost (bonus de pollen rouge).</td>
+                    <td>Œufs de base ou rare.</td>
+                </tr>
+                <tr>
+                    <td>Rad Bee</td>
+                    <td><span class="rarity rare">Rare</span></td>
+                    <td>Rouge</td>
+                    <td>Capacité Red Boost (bonus de pollen rouge).</td>
+                    <td>Œufs de base ou rare.</td>
+                </tr>
+                <tr>
+                    <td>Bubble Bee</td>
+                    <td><span class="rarity epic">Épique</span></td>
+                    <td>Bleue</td>
+                    <td>Capacité Bubble (bonus de pollen bleu).</td>
+                    <td>Œufs rares ou épiques.</td>
+                </tr>
+                <tr>
+                    <td>Riley Bee</td>
+                    <td><span class="rarity legendary">Légendaire</span></td>
+                    <td>Rouge</td>
+                    <td>Capacité Red Boost et Focus.</td>
+                    <td>Œufs légendaires ou donnés par le club Rouge HQ.</td>
+                </tr>
+                <tr>
+                    <td>Tabby Bee</td>
+                    <td><span class="rarity event">Événement</span></td>
+                    <td>Neutre</td>
+                    <td>Capacité Tabby Love (bonus cumulatif de collecte).</td>
+                    <td>Achetée avec des tickets.</td>
+                </tr>
+                <!-- Ajoute d'autres abeilles ici -->
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
+x
